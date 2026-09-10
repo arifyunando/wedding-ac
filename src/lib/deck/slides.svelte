@@ -7,8 +7,8 @@
 	import Notes from 'reveal.js/plugin/notes'
 
 	import 'reveal.js/reveal.css'
-	import 'reveal.js/theme/black.css'
-	import 'reveal.js/plugin/highlight/monokai.css'
+	// import 'reveal.js/theme/white.css'
+	// import 'reveal.js/plugin/highlight/monokai.css'
 
 	import Presentation from './presentation.svelte'
 
@@ -17,7 +17,10 @@
 			plugins: [Markdown, Highlight, Notes],
 			autoAnimateEasing: 'ease',
 			autoAnimateDuration: 1,
-			hash: true
+			hash: true,
+      overview: false,
+			view: 'scroll',
+			scrollProgress: true,
 		})
 
 		deck.initialize()
@@ -25,7 +28,7 @@
 </script>
 
 <div class="reveal">
-	<div class="slides">
+	<div class="slides max-sm:text-4xl">
 		<Presentation />
 	</div>
 </div>

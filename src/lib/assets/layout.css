@@ -3,8 +3,8 @@
 html {
 	/* font */
 	/* --font-system-ui: 'Source Sans 3', sans-serif; */
-	--font-system-ui: "Josefin Sans", sans-serif;
-	--font-script-ui: "Pinyon Script", cursive;
+	--font-system-ui: 'Josefin Sans', sans-serif;
+	--font-script-ui: 'Pinyon Script', cursive;
 	--font-monospace-code: 'JetBrains Mono', monospace;
 
 	/* Screen sizes */
@@ -224,3 +224,4 @@ a:active {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(min(var(--min-grid-column-width), 100%), 1fr));
 }
+
