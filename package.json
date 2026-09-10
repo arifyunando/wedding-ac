@@ -29,6 +29,7 @@
 		"prettier": "^3.8.3",
 		"prettier-plugin-svelte": "^4.1.0",
 		"prettier-plugin-tailwindcss": "^0.8.0",
+		"prisma": "6",
 		"svelte": "^5.56.1",
 		"svelte-check": "^4.6.0",
 		"tailwindcss": "^4.3.0",
@@ -39,6 +40,8 @@
 	"dependencies": {
 		"@fontsource/jetbrains-mono": "^5.3.0",
 		"@fontsource/manrope": "^5.3.0",
+		"@prisma/adapter-libsql": "^7.10.0",
+		"@prisma/client": "6",
 		"@types/reveal.js": "^5.2.2",
 		"reveal.js": "^6.0.1"
 	}
