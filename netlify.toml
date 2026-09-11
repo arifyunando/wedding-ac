@@ -1,3 +1,3 @@
 [build]
-	command = "bunx prisma generate && bun run build"
+	command = "bun install && bunx prisma generate && bun run build"
 	publish = "build"
