@@ -28,6 +28,7 @@ export type AggregateAttendant = {
 
 export type AttendantAvgAggregateOutputType = {
   id: number | null
+  phoneNumber: number | null
   numAttendantsMdn: number | null
   numAttendantsGrj: number | null
   numAttendantsLee: number | null
@@ -35,6 +36,7 @@ export type AttendantAvgAggregateOutputType = {
 
 export type AttendantSumAggregateOutputType = {
   id: number | null
+  phoneNumber: number | null
   numAttendantsMdn: number | null
   numAttendantsGrj: number | null
   numAttendantsLee: number | null
@@ -44,7 +46,7 @@ export type AttendantMinAggregateOutputType = {
   id: number | null
   name: string | null
   countryCode: string | null
-  phoneNumber: string | null
+  phoneNumber: number | null
   affiliation: string | null
   numAttendantsMdn: number | null
   numAttendantsGrj: number | null
@@ -56,7 +58,7 @@ export type AttendantMaxAggregateOutputType = {
   id: number | null
   name: string | null
   countryCode: string | null
-  phoneNumber: string | null
+  phoneNumber: number | null
   affiliation: string | null
   numAttendantsMdn: number | null
   numAttendantsGrj: number | null
@@ -80,6 +82,7 @@ export type AttendantCountAggregateOutputType = {
 
 export type AttendantAvgAggregateInputType = {
   id?: true
+  phoneNumber?: true
   numAttendantsMdn?: true
   numAttendantsGrj?: true
   numAttendantsLee?: true
@@ -87,6 +90,7 @@ export type AttendantAvgAggregateInputType = {
 
 export type AttendantSumAggregateInputType = {
   id?: true
+  phoneNumber?: true
   numAttendantsMdn?: true
   numAttendantsGrj?: true
   numAttendantsLee?: true
@@ -219,7 +223,7 @@ export type AttendantGroupByOutputType = {
   id: number
   name: string
   countryCode: string
-  phoneNumber: string
+  phoneNumber: number
   affiliation: string
   numAttendantsMdn: number
   numAttendantsGrj: number
@@ -254,7 +258,7 @@ export type AttendantWhereInput = {
   id?: Prisma.IntFilter<"Attendant"> | number
   name?: Prisma.StringFilter<"Attendant"> | string
   countryCode?: Prisma.StringFilter<"Attendant"> | string
-  phoneNumber?: Prisma.StringFilter<"Attendant"> | string
+  phoneNumber?: Prisma.IntFilter<"Attendant"> | number
   affiliation?: Prisma.StringFilter<"Attendant"> | string
   numAttendantsMdn?: Prisma.IntFilter<"Attendant"> | number
   numAttendantsGrj?: Prisma.IntFilter<"Attendant"> | number
@@ -281,7 +285,7 @@ export type AttendantWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.AttendantWhereInput | Prisma.AttendantWhereInput[]
   name?: Prisma.StringFilter<"Attendant"> | string
   countryCode?: Prisma.StringFilter<"Attendant"> | string
-  phoneNumber?: Prisma.StringFilter<"Attendant"> | string
+  phoneNumber?: Prisma.IntFilter<"Attendant"> | number
   affiliation?: Prisma.StringFilter<"Attendant"> | string
   numAttendantsMdn?: Prisma.IntFilter<"Attendant"> | number
   numAttendantsGrj?: Prisma.IntFilter<"Attendant"> | number
@@ -313,7 +317,7 @@ export type AttendantScalarWhereWithAggregatesInput = {
   id?: Prisma.IntWithAggregatesFilter<"Attendant"> | number
   name?: Prisma.StringWithAggregatesFilter<"Attendant"> | string
   countryCode?: Prisma.StringWithAggregatesFilter<"Attendant"> | string
-  phoneNumber?: Prisma.StringWithAggregatesFilter<"Attendant"> | string
+  phoneNumber?: Prisma.IntWithAggregatesFilter<"Attendant"> | number
   affiliation?: Prisma.StringWithAggregatesFilter<"Attendant"> | string
   numAttendantsMdn?: Prisma.IntWithAggregatesFilter<"Attendant"> | number
   numAttendantsGrj?: Prisma.IntWithAggregatesFilter<"Attendant"> | number
@@ -324,7 +328,7 @@ export type AttendantScalarWhereWithAggregatesInput = {
 export type AttendantCreateInput = {
   name: string
   countryCode: string
-  phoneNumber: string
+  phoneNumber: number
   affiliation: string
   numAttendantsMdn: number
   numAttendantsGrj: number
@@ -336,7 +340,7 @@ export type AttendantUncheckedCreateInput = {
   id?: number
   name: string
   countryCode: string
-  phoneNumber: string
+  phoneNumber: number
   affiliation: string
   numAttendantsMdn: number
   numAttendantsGrj: number
@@ -347,7 +351,7 @@ export type AttendantUncheckedCreateInput = {
 export type AttendantUpdateInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   countryCode?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.StringFieldUpdateOperationsInput | string
+  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   affiliation?: Prisma.StringFieldUpdateOperationsInput | string
   numAttendantsMdn?: Prisma.IntFieldUpdateOperationsInput | number
   numAttendantsGrj?: Prisma.IntFieldUpdateOperationsInput | number
@@ -359,7 +363,7 @@ export type AttendantUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   countryCode?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.StringFieldUpdateOperationsInput | string
+  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   affiliation?: Prisma.StringFieldUpdateOperationsInput | string
   numAttendantsMdn?: Prisma.IntFieldUpdateOperationsInput | number
   numAttendantsGrj?: Prisma.IntFieldUpdateOperationsInput | number
@@ -371,7 +375,7 @@ export type AttendantCreateManyInput = {
   id?: number
   name: string
   countryCode: string
-  phoneNumber: string
+  phoneNumber: number
   affiliation: string
   numAttendantsMdn: number
   numAttendantsGrj: number
@@ -382,7 +386,7 @@ export type AttendantCreateManyInput = {
 export type AttendantUpdateManyMutationInput = {
   name?: Prisma.StringFieldUpdateOperationsInput | string
   countryCode?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.StringFieldUpdateOperationsInput | string
+  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   affiliation?: Prisma.StringFieldUpdateOperationsInput | string
   numAttendantsMdn?: Prisma.IntFieldUpdateOperationsInput | number
   numAttendantsGrj?: Prisma.IntFieldUpdateOperationsInput | number
@@ -394,7 +398,7 @@ export type AttendantUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   name?: Prisma.StringFieldUpdateOperationsInput | string
   countryCode?: Prisma.StringFieldUpdateOperationsInput | string
-  phoneNumber?: Prisma.StringFieldUpdateOperationsInput | string
+  phoneNumber?: Prisma.IntFieldUpdateOperationsInput | number
   affiliation?: Prisma.StringFieldUpdateOperationsInput | string
   numAttendantsMdn?: Prisma.IntFieldUpdateOperationsInput | number
   numAttendantsGrj?: Prisma.IntFieldUpdateOperationsInput | number
@@ -416,6 +420,7 @@ export type AttendantCountOrderByAggregateInput = {
 
 export type AttendantAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  phoneNumber?: Prisma.SortOrder
   numAttendantsMdn?: Prisma.SortOrder
   numAttendantsGrj?: Prisma.SortOrder
   numAttendantsLee?: Prisma.SortOrder
@@ -447,6 +452,7 @@ export type AttendantMinOrderByAggregateInput = {
 
 export type AttendantSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
+  phoneNumber?: Prisma.SortOrder
   numAttendantsMdn?: Prisma.SortOrder
   numAttendantsGrj?: Prisma.SortOrder
   numAttendantsLee?: Prisma.SortOrder
@@ -527,7 +533,7 @@ export type $AttendantPayload<ExtArgs extends runtime.Types.Extensions.InternalA
     id: number
     name: string
     countryCode: string
-    phoneNumber: string
+    phoneNumber: number
     affiliation: string
     numAttendantsMdn: number
     numAttendantsGrj: number
@@ -959,7 +965,7 @@ export interface AttendantFieldRefs {
   readonly id: Prisma.FieldRef<"Attendant", 'Int'>
   readonly name: Prisma.FieldRef<"Attendant", 'String'>
   readonly countryCode: Prisma.FieldRef<"Attendant", 'String'>
-  readonly phoneNumber: Prisma.FieldRef<"Attendant", 'String'>
+  readonly phoneNumber: Prisma.FieldRef<"Attendant", 'Int'>
   readonly affiliation: Prisma.FieldRef<"Attendant", 'String'>
   readonly numAttendantsMdn: Prisma.FieldRef<"Attendant", 'Int'>
   readonly numAttendantsGrj: Prisma.FieldRef<"Attendant", 'Int'>

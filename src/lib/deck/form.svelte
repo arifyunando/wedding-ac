@@ -1,4 +1,5 @@
 <script>
+	let { medan, gereja, lee } = $props();
 	// Country codes for the phone number combobox
 	const countryCodes = [
 		{ code: '+1', label: '+1 (US/CA)' },
@@ -27,7 +28,8 @@
 	let numAttendantsLee = $state(0);
 
 	let submitted = $state(false);
-	let submitSuccess = $state(false);
+	let isValid = $state(false);
+	let submitSuccess = $state();
 
 	// Raw validity check, recomputed reactively from current field values
 	let rawErrors = $derived({
@@ -60,18 +62,26 @@
 	function handleSubmit(event) {
 		event.preventDefault();
 		submitted = true;
-		const isValid = !Object.values(rawErrors).some(Boolean);
-		submitSuccess = isValid;
-		console.log(isValid);
+
+		isValid = !Object.values(rawErrors).some(Boolean);
 		if (isValid) {
+			const isAttendingBool = isAttending === 'yes';
+
+			if (!isAttendingBool) {
+				numAttendantsMdn = 0;
+				numAttendantsGrj = 0;
+				numAttendantsLee = 0;
+			}
+
 			const userData = {
 				name,
-				phone: `${countryCode}${phoneNumber}`,
+				countryCode,
+				phoneNumber,
 				affiliation,
 				numAttendantsMdn,
 				numAttendantsGrj,
 				numAttendantsLee,
-				isAttending
+				isAttending: isAttendingBool
 			};
 
 			fetch('api', {
@@ -87,148 +97,165 @@
 					}
 					return response.json(); // Parses response into JavaScript object
 				})
-				.then((data) => console.log('Success:', data))
-				.catch((error) => console.error('Error:', error));
+				.then((data) => {
+					submitSuccess = true;
+					console.log('Success:', data);
+				})
+				.catch((error) => {
+					submitSuccess = false;
+					console.error('Error:', error);
+				});
 		}
 	}
 </script>
 
 <div class="form-wrapper">
-	<form onsubmit={handleSubmit} novalidate>
-		<!-- Name -->
-		<div class="field">
-			<label for="name">Name</label>
-			<input
-				id="name"
-				type="text"
-				bind:value={name}
-				class:error={errors.name}
-				placeholder="Enter your full name"
-			/>
-			{#if errors.name}
-				<span class="error-text">Name is required.</span>
-			{/if}
-		</div>
-
-		<!-- Phone Number -->
-		<div class="field">
-			<label for="phone">Phone Number</label>
-			<div class="phone-row">
-				<select id="countryCode" bind:value={countryCode} class:error={errors.countryCode}>
-					<option value="" disabled selected>Code</option>
-					{#each countryCodes as c (c.code)}
-						<option value={c.code}>{c.label}</option>
-					{/each}
-				</select>
-				<input
-					id="phone"
-					type="number"
-					bind:value={phoneNumber}
-					class:error={errors.phoneNumber}
-					placeholder="Phone number"
-					min="0"
-				/>
-			</div>
-			{#if errors.countryCode || errors.phoneNumber}
-				<span class="error-text">Country code and phone number are required.</span>
-			{/if}
-		</div>
-
-		<!-- Affiliation -->
-		<div class="field">
-			<label for="affiliation">Affiliation</label>
-			<input
-				id="affiliation"
-				type="text"
-				bind:value={affiliation}
-				class:error={errors.affiliation}
-				placeholder="Company / Organization"
-			/>
-			{#if errors.affiliation}
-				<span class="error-text">Affiliation is required.</span>
-			{/if}
-		</div>
-
-		<!-- Is Attending -->
-		<div class="field">
-			<span class="group-label">Is Attending</span>
-			<div class="radio-group" class:error={errors.isAttending}>
-				<label class="radio-option">
-					<input type="radio" name="isAttending" value="yes" bind:group={isAttending} />
-					Yes
-				</label>
-				<label class="radio-option">
-					<input type="radio" name="isAttending" value="no" bind:group={isAttending} />
-					No
-				</label>
-			</div>
-			{#if errors.isAttending}
-				<span class="error-text">Please select yes or no.</span>
-			{/if}
-		</div>
-
-		<!-- Number of Attendants -->
-		{#key isAttending}
-			{#if isAttending == 'yes'}
+	{#key submitSuccess}
+		{#if !submitSuccess}
+			<form onsubmit={handleSubmit} novalidate>
+				<!-- Name -->
 				<div class="field">
-					<p>Jumlah Tamu</p>
-					<!-- Medan Attendants -->
-					<div class="grid grid-cols-2 items-center gap-y-1 text-left">
-						<label for="numAttendants">Selecta Medan: </label>
-						<select
-							id="numAttendants"
-							bind:value={numAttendantsMdn}
-							class:error={errors.numAttendants}
-							placeholder="Selecta Medan"
-						>
-							<option value={0} selected>0</option>
-							{#each attendantOptions as n, i (i)}
-								<option value={n}>{n}</option>
-							{/each}
-						</select>
-						<!-- Gereja Attendants -->
-						<label for="numAttendants">Holy Matrimony: </label>
-
-						<select
-							id="numAttendants"
-							bind:value={numAttendantsGrj}
-							class:error={errors.numAttendants}
-							placeholder="Selecta Medan"
-						>
-							<option value={0} selected>0</option>
-							{#each attendantOptions as n, i (i)}
-								<option value={n}>{n}</option>
-							{/each}
-						</select>
-						<!-- Lee Palace Attendants -->
-						<label for="numAttendants">Lee Palace: </label>
-						<select
-							id="numAttendants"
-							bind:value={numAttendantsLee}
-							class:error={errors.numAttendants}
-							placeholder="Selecta Medan"
-						>
-							<option value={0} selected>0</option>
-							{#each attendantOptions as n, i (i)}
-								<option value={n}>{n}</option>
-							{/each}
-						</select>
-						{#if errors.numAttendants}
-							<span class="error-text">Please select the number of attendants.</span>
-						{/if}
-					</div>
+					<label for="name">Nama</label>
+					<input
+						id="name"
+						type="text"
+						bind:value={name}
+						class:error={errors.name}
+						placeholder="Masukan nama anda"
+					/>
+					{#if errors.name}
+						<span class="error-text">Nama harus diisi.</span>
+					{/if}
 				</div>
-			{/if}
-		{/key}
 
-		<button type="submit">Submit</button>
+				<!-- Phone Number -->
+				<div class="field">
+					<label for="phone">No Telepon</label>
+					<div class="phone-row">
+						<select id="countryCode" bind:value={countryCode} class:error={errors.countryCode}>
+							<option value="" disabled selected>Code</option>
+							{#each countryCodes as c (c.code)}
+								<option value={c.code}>{c.label}</option>
+							{/each}
+						</select>
+						<input
+							id="phone"
+							type="number"
+							bind:value={phoneNumber}
+							class:error={errors.phoneNumber}
+							placeholder="No telepon"
+							min="0"
+						/>
+					</div>
+					{#if errors.countryCode || errors.phoneNumber}
+						<span class="error-text">Kode negara dan No. telepon harus diisi.</span>
+					{/if}
+				</div>
 
-		{#if submitted && submitSuccess}
-			<p class="success-text">Form submitted successfully!</p>
-		{:else if submitted && !submitSuccess}
-			<p class="fail-text">Please fill in all required fields.</p>
+				<!-- Affiliation -->
+				<div class="field">
+					<label for="affiliation">Afiliasi / Toko</label>
+					<input
+						id="affiliation"
+						type="text"
+						bind:value={affiliation}
+						class:error={errors.affiliation}
+						placeholder="Afiliasi / Organisasi (Contoh: Unpar)"
+					/>
+					{#if errors.affiliation}
+						<span class="error-text">Afiliasi / nama toko harus diisi. Contoh: Unpar</span>
+					{/if}
+				</div>
+
+				<!-- Is Attending -->
+				<div class="field">
+					<span class="group-label">Apakah akan hadir?</span>
+					<div class="radio-group" class:error={errors.isAttending}>
+						<label class="radio-option">
+							<input type="radio" name="isAttending" value="yes" bind:group={isAttending} />
+							Iya
+						</label>
+						<label class="radio-option">
+							<input type="radio" name="isAttending" value="no" bind:group={isAttending} />
+							Tidak
+						</label>
+					</div>
+					{#if errors.isAttending}
+						<span class="error-text">Please select yes or no.</span>
+					{/if}
+				</div>
+
+				<!-- Number of Attendants -->
+				{#key isAttending}
+					{#if isAttending == 'yes'}
+						<div class="field">
+							<p>Jumlah Tamu</p>
+							<div class="grid grid-cols-2 items-center gap-y-1 text-left">
+								<!-- Medan Attendants -->
+								{#if medan}
+									<label for="numAttendantsMdn">Selecta Medan: </label>
+									<select
+										id="numAttendantsMdn"
+										bind:value={numAttendantsMdn}
+										class:error={errors.numAttendants}
+										placeholder="Selecta Medan"
+									>
+										<option value={0} selected>0</option>
+										{#each attendantOptions as n, i (i)}
+											<option value={n}>{n}</option>
+										{/each}
+									</select>
+								{/if}
+								<!-- Gereja Attendants -->
+								{#if gereja}
+									<label for="numAttendantsGrj">Holy Matrimony: </label>
+									<select
+										id="numAttendantsGrj"
+										bind:value={numAttendantsGrj}
+										class:error={errors.numAttendants}
+										placeholder="GKI Samanhudi"
+									>
+										<option value={0} selected>0</option>
+										{#each attendantOptions as n, i (i)}
+											<option value={n}>{n}</option>
+										{/each}
+									</select>
+								{/if}
+								<!-- Lee Palace Attendants -->
+								{#if lee}
+									<label for="numAttendantsLee">Lee Palace: </label>
+									<select
+										id="numAttendantsLee"
+										bind:value={numAttendantsLee}
+										class:error={errors.numAttendants}
+										placeholder="Lee Palace Restaurant"
+									>
+										<option value={0} selected>0</option>
+										{#each attendantOptions as n, i (i)}
+											<option value={n}>{n}</option>
+										{/each}
+									</select>
+								{/if}
+
+								{#if errors.numAttendants}
+									<span class="error-text col-span-2">Silahkan masukan jumlah tamu.</span>
+								{/if}
+							</div>
+						</div>
+					{/if}
+				{/key}
+
+				<button type="submit">Kirim</button>
+			</form>
 		{/if}
-	</form>
+	{/key}
+	{#if submitted && !isValid}
+		<p class="fail-text">Harap mengisi seluruh kolom yang wajib diisi.</p>
+	{:else if submitted && !submitSuccess}
+		<p class="fail-text">No Telp anda sudah terdaftar.</p>
+	{:else if submitted && submitSuccess}
+		<p class="success-text">Terima kasih! 感謝光臨</p>
+	{/if}
 </div>
 
 <style>
@@ -243,8 +270,8 @@
 		line-height: var(--text-sm--line-height);
 
 		@media (width < 40rem /* 640px */) {
-			font-size: var(--text-4xl);
-			line-height: var(--text-4xl--line-height);
+			font-size: var(--text-3xl);
+			line-height: var(--text-3xl--line-height);
 			padding: 5rem 2rem;
 		}
 	}

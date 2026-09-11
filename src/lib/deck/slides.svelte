@@ -1,16 +1,13 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
+	import Reveal from 'reveal.js';
+	import Highlight from 'reveal.js/plugin/highlight';
+	import Markdown from 'reveal.js/plugin/markdown';
+	import Notes from 'reveal.js/plugin/notes';
+	import Presentation from './presentation.svelte';
+	import 'reveal.js/reveal.css';
 
-	import Reveal from 'reveal.js'
-	import Highlight from 'reveal.js/plugin/highlight'
-	import Markdown from 'reveal.js/plugin/markdown'
-	import Notes from 'reveal.js/plugin/notes'
-
-	import 'reveal.js/reveal.css'
-	// import 'reveal.js/theme/white.css'
-	// import 'reveal.js/plugin/highlight/monokai.css'
-
-	import Presentation from './presentation.svelte'
+	let { medan = false, gereja = false, lee = false } = $props();
 
 	onMount(() => {
 		const deck = new Reveal({
@@ -18,17 +15,17 @@
 			autoAnimateEasing: 'ease',
 			autoAnimateDuration: 1,
 			hash: true,
-      overview: false,
+			overview: false,
 			view: 'scroll',
-			scrollProgress: true,
-		})
+			scrollProgress: true
+		});
 
-		deck.initialize()
-	})
+		deck.initialize();
+	});
 </script>
 
 <div class="reveal">
 	<div class="slides max-sm:text-4xl">
-		<Presentation />
+		<Presentation {medan} {gereja} {lee} />
 	</div>
 </div>
