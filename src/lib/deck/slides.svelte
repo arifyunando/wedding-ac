@@ -17,7 +17,8 @@
 			hash: true,
 			overview: false,
 			view: 'scroll',
-			scrollProgress: true
+			scrollProgress: true,
+			touch: false,
 		});
 
 		deck.initialize();
