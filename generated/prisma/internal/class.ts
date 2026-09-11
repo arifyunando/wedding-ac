@@ -34,6 +34,10 @@ const config: runtime.GetPrismaClientConfig = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
@@ -56,8 +60,8 @@ const config: runtime.GetPrismaClientConfig = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"sqlite\"\n  url      = env(\"LOCAL_DATABASE_URL\")\n}\n\nmodel Attendant {\n  id               Int     @id @default(autoincrement())\n  name             String\n  countryCode      String\n  phoneNumber      Int\n  affiliation      String\n  numAttendantsMdn Int\n  numAttendantsGrj Int\n  numAttendantsLee Int\n  isAttending      Boolean\n}\n",
-  "inlineSchemaHash": "1276404a7aa5766d1ae7013333162fd413f0a266cea3fa8447a94acf93785534",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider      = \"prisma-client\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"sqlite\"\n  url      = env(\"LOCAL_DATABASE_URL\")\n}\n\nmodel Attendant {\n  id               Int     @id @default(autoincrement())\n  name             String\n  countryCode      String\n  phoneNumber      Int\n  affiliation      String\n  numAttendantsMdn Int\n  numAttendantsGrj Int\n  numAttendantsLee Int\n  isAttending      Boolean\n}\n",
+  "inlineSchemaHash": "3df8949d78ccc28bd6c038a4e49ab21564b13206c60ff7a09deb3d38d30be9c2",
   "copyEngine": true,
   "runtimeDataModel": {
     "models": {},

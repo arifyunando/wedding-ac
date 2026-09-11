@@ -6,4 +6,4 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
-<Slides />
+<Slides medan gereja lee/>

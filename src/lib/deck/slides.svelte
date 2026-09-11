@@ -6,6 +6,7 @@
 	import Notes from 'reveal.js/plugin/notes';
 	import Presentation from './presentation.svelte';
 	import 'reveal.js/reveal.css';
+	import '$lib/assets/reveal-custom.css';
 
 	let { medan = false, gereja = false, lee = false } = $props();
 
@@ -16,9 +17,10 @@
 			autoAnimateDuration: 1,
 			hash: true,
 			overview: false,
-			view: 'scroll',
 			scrollProgress: true,
 			touch: false,
+			disableLayout: true,
+			center: false,
 		});
 
 		deck.initialize();
@@ -26,7 +28,7 @@
 </script>
 
 <div class="reveal">
-	<div class="slides max-sm:text-4xl">
+	<div class="slides">
 		<Presentation {medan} {gereja} {lee} />
 	</div>
 </div>

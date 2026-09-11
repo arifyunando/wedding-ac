@@ -1,0 +1,7 @@
+.auto-adjust-grid {
+	--min-grid-column-width: 35rem;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(var(--min-grid-column-width), 100%), 1fr));
+}
+

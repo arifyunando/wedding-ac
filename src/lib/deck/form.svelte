@@ -252,7 +252,7 @@
 	{#if submitted && !isValid}
 		<p class="fail-text">Harap mengisi seluruh kolom yang wajib diisi.</p>
 	{:else if submitted && !submitSuccess}
-		<p class="fail-text">No Telp anda sudah terdaftar.</p>
+		<p class="fail-text">Terjadi kesalahan. Silahkan coba lagi / hubungi kami.</p> <a href="https://wa.link/60r9qu"><p class="underline underline-offset-5 hover:font-bold">☎️ WhatsApp</p></a>
 	{:else if submitted && submitSuccess}
 		<p class="success-text">Terima kasih! 感謝光臨</p>
 	{/if}
@@ -268,29 +268,12 @@
 		width: 100%;
 		font-size: var(--text-sm);
 		line-height: var(--text-sm--line-height);
-
-		@media (width < 40rem /* 640px */) {
-			font-size: var(--text-3xl);
-			line-height: var(--text-3xl--line-height);
-			padding: 5rem 2rem;
-		}
-	}
-
-	option {
-		@media (width < 40rem /* 640px */) {
-			font-size: var(--text-sm);
-			line-height: var(--text-sm--line-height);
-		}
 	}
 
 	form {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-
-		@media (width < 40rem /* 640px */) {
-			gap: 2rem;
-		}
 	}
 
 	.field {
