@@ -28,7 +28,7 @@
 </script>
 
 <div class="reveal">
-	<div class="slides">
+	<div class="slides grid">
 		<Presentation {medan} {gereja} {lee} />
 	</div>
 </div>

@@ -4,7 +4,7 @@
 	let { medan, gereja, lee } = $props();
 </script>
 
-<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 	<div class="flex h-dvh flex-col items-center justify-center pt-10">
 		<img src="/assets/logo-full-transparent.png" alt="monogram" class="p-10 md:w-150" />
 		<button
@@ -18,7 +18,7 @@
 	</div>
 </section>
 <!-- Bride and Groom -->
-<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 	<div
 		class="relative flex h-dvh flex-col-reverse place-items-center items-center justify-center gap-2 p-5 align-middle sm:flex-row sm:gap-10 sm:p-15"
 	>
@@ -41,7 +41,7 @@
 </section>
 <!-- Selecta Invitations -->
 {#if medan}
-	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
 			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Engagement Banquet</p>
 			<div class="grid justify-self-center text-center sm:w-100">
@@ -70,7 +70,7 @@
 {/if}
 <!-- Church Invitations -->
 {#if gereja}
-	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
 			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Holy Matrimony</p>
 			<div class="grid justify-self-center text-center sm:w-100">
@@ -96,7 +96,7 @@
 {/if}
 <!-- Lee Palace Invitations -->
 {#if lee}
-	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
 			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Wedding Banquet</p>
 			<div class="grid justify-self-center text-center sm:w-100">
@@ -122,9 +122,9 @@
 
 <!-- Chinese Invitations (Selecta) -->
 {#if medan}
-	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="hidden h-dvh w-full justify-center align-middle sm:grid">
-			<img src="/assets/chinese-invitations-mdn.png" alt="monogram" class="p-10" />
+			<img src="/assets/chinese-invitations-mdn.png" alt="monogram" class="p-5 object-contain" />
 		</div>
 		<div class="chinese-invitations grid sm:hidden">
 			<img src="/assets/chinese-invitations-mdn-vert.png" alt="monogram" />
@@ -132,9 +132,9 @@
 	</section>
 {:else}
 	<!-- Chinese Invitations (Lee Palace) -->
-	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="hidden h-dvh w-full justify-center align-middle sm:grid">
-			<img src="/assets/chinese-invitations-jkt.png" alt="monogram" class="p-10" />
+			<img src="/assets/chinese-invitations-jkt.png" alt="monogram" class="p-5" />
 		</div>
 		<div class="chinese-invitations grid sm:hidden">
 			<img src="/assets/chinese-invitations-jkt-vert.png" alt="monogram" />
@@ -144,7 +144,7 @@
 
 <!-- RSVP -->
 {#if !medan}
-	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="flex h-dvh w-full flex-col justify-center p-5 align-middle">
 			<p class="mt-3 font-(family-name:--font-script-ui) text-6xl">Seat Reservations</p>
 			<Form {medan} {gereja} {lee} />
@@ -153,7 +153,7 @@
 {/if}
 
 <!-- Closing + Wedding Gift -->
-<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 	<div class="grid h-dvh items-center justify-center">
 		<p class="font-(family-name:--font-script-ui) text-7xl">Thank You</p>
 	</div>
