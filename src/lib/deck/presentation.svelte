@@ -50,6 +50,10 @@
 				<p>Sunday, 4 October 2026</p>
 				<p>19:00 WIB</p>
 			</div>
+			<div class="grid justify-self-center text-center sm:w-100">
+				<p class="">Upacara penjemputan mempelai wanita dan Ibadah Pemberkatan Pernikahan</p>
+				<p class="">akan diselenggarakan pada 10 Oktober 2026 di Jakarta</p>
+			</div>
 			<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
 				<button
 					class="my-12 inline-flex w-1/2 transform cursor-pointer items-center
