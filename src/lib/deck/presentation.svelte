@@ -24,17 +24,17 @@
 	>
 		<div class="justify-center text-center align-middle sm:m-10">
 			<div class="mb-10">
-				<p class="text-xs italic">
-					"For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to
+				<p class="text-sm italic">
+					"For I know the plans I have for you,” declares the Lord, <br> “plans to prosper you and not to
 					harm you, plans to give you hope and a future."
 				</p>
-				<p class="text-xs">Jeremiah 29:11</p>
+				<p class="text-sm">- Jeremiah 29:11</p>
 			</div>
 			<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Arif Yunando Sunanhadikusuma</p>
-			<p>The youngest son of <br /> Mr. Firdaus Yunando Sun & <br /> Mrs. Evie Kertarahardja</p>
+			<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & <br /> Ny. Evie Kertarahardja</p>
 			<p class="my-5">&</p>
 			<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
-			<p>The eldest daughter of <br /> Mr. Rosissan & Mrs. Mai Jani</p>
+			<p>Putri sulung dari <br /> Tn. Rosissan & Ny. Mai Jani</p>
 		</div>
 		<img src="/assets/couple-2.JPG" alt="monogram" class="flex-1 overflow-hidden" />
 	</div>
@@ -45,14 +45,15 @@
 		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
 			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Engagement Banquet</p>
 			<div class="grid justify-self-center text-center sm:w-100">
-				<p class="my-5 text-2xl">Selecta Hotel Ballroom (3rd Floor)</p>
-				<p class="my-5">Jl. Listrik No.2, Kota Medan</p>
-				<p>Sunday, 4 October 2026</p>
+				<p class="my-5 text-2xl">Selecta Hotel Ballroom (Lantai 3)</p>
+				<p class="my-2">Jl. Listrik No.2, Kota Medan</p>
+				<p class="my-1">Minggu, 4 Oktober 2026</p>
 				<p>19:00 WIB</p>
 			</div>
 			<div class="grid justify-self-center text-center sm:w-100">
-				<p class="">Upacara penjemputan mempelai wanita dan Ibadah Pemberkatan Pernikahan</p>
-				<p class="">akan diselenggarakan pada 10 Oktober 2026 di Jakarta</p>
+				<p class="text-sm">Upacara penjemputan mempelai wanita
+				dan Ibadah Pemberkatan Pernikahan
+				akan diselenggarakan pada <br> 10 Oktober 2026 di Jakarta</p>
 			</div>
 			<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
 				<button
@@ -74,10 +75,10 @@
 			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Holy Matrimony</p>
 			<div class="grid justify-self-center text-center sm:w-100">
 				<p class="my-5 text-2xl">GKI Samanhudi</p>
-				<p class="my-5">
+				<p class="my-2">
 					Jl. Samanhudi 28, Pasar Baru <br /> Sawah Besar, Jakarta Pusat
 				</p>
-				<p>Saturday, 10 October 2026</p>
+				<p class="my-1">Sabtu, 10 Oktober 2026</p>
 				<p>10:00 WIB</p>
 			</div>
 			<a href="https://maps.app.goo.gl/N9J1MARFVP3AgoyD8" target="_blank">
@@ -101,8 +102,8 @@
 			<div class="grid justify-self-center text-center sm:w-100">
 				<p class="my-5 text-2xl">Lee Palace Restaurant</p>
 				<p class="mt-5 mb-3">Harmoni Exchange Mall Lt. 3</p>
-				<p class="mb-5">Jl. Hayam Wuruk VI No. 6, Gambir, Jakarta Pusat</p>
-				<p>Sunday, 11 October 2026</p>
+				<p class="mb-2">Jl. Hayam Wuruk VI No. 6, Gambir, Jakarta Pusat</p>
+				<p class="my-1">Minggu, 11 Oktober 2026</p>
 				<p>18:30 WIB</p>
 			</div>
 			<a href="https://maps.app.goo.gl/2ZwpGuFbSueqRejw7" target="_blank">
