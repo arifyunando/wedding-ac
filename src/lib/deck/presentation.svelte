@@ -138,16 +138,18 @@
 {/if}
 
 <!-- RSVP -->
-<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
-	<div class="flex h-dvh w-full flex-col justify-center p-5 align-middle">
-		<p class="mt-3 font-(family-name:--font-script-ui) text-6xl">Seat Reservations</p>
-		<Form {medan} {gereja} {lee} />
-	</div>
-</section>
+{#if !medan}
+	<section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
+		<div class="flex h-dvh w-full flex-col justify-center p-5 align-middle">
+			<p class="mt-3 font-(family-name:--font-script-ui) text-6xl">Seat Reservations</p>
+			<Form {medan} {gereja} {lee} />
+		</div>
+	</section>
+{/if}
 
 <!-- Closing + Wedding Gift -->
 <section data-background-opacity=".4" data-background-image="/assets/bg-3.jpg" data-auto-animate>
-	<div class="grid h-dvh justify-center items-center">
+	<div class="grid h-dvh items-center justify-center">
 		<p class="font-(family-name:--font-script-ui) text-7xl">Thank You</p>
 	</div>
 </section>
