@@ -47,7 +47,7 @@
 <!-- Selecta Invitations -->
 {#if medan}
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
-		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
+		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle text-xs sm:text-base">
 			<div class="justify-center text-center align-middle sm:m-10">
 				<div class="mb-6">
 					<p>
@@ -55,22 +55,22 @@
 						putra - putri kami:
 					</p>
 				</div>
-				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
+				<p class="pb-3 font-(family-name:--font-script-ui) text-xl sm:text-3xl">Cindy Rosemary</p>
 				<p>
 					Putri sulung dari Tn. Rosissan & Ny. Mai Jani <br /> (PT Buana Trussindo Mandiri)
 				</p>
 				<p class="my-5">&</p>
-				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">
+				<p class="pb-3 font-(family-name:--font-script-ui) text-xl sm:text-3xl">
 					Arif Yunando Sunanhadikusuma
 				</p>
 				<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & Ny. Evie Kertarahardja</p>
 				<div class="mt-5 grid gap-10 justify-self-center text-center sm:grid-cols-2">
 					<div>
-						<p class="my-2 text-xl font-bold">Pertunangan</p>
+						<p class="my-2 sm:text-xl font-bold">Pertunangan</p>
 						<hr />
-						<p class="mt-2 text-lg font-semibold">Selecta Hotel Ballroom (Lantai 3)</p>
+						<p class="mt-2 sm:text-lg font-semibold">Selecta Hotel Ballroom (Lantai 3)</p>
 						<p class="mb-2">Jl. Listrik No.2, Kota Medan</p>
-						<p class="mt-2 text-lg font-semibold">Minggu, 4 Oktober 2026</p>
+						<p class="mt-2 sm:text-lg font-semibold">Minggu, 4 Oktober 2026</p>
 						<p class="mb-2">Pukul 19:00 WIB</p>
 						<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
 							<button
@@ -83,7 +83,7 @@
 							</button>
 						</a>
 					</div>
-					<div>
+					<div class="max-sm:hidden">
 						<p class="my-2 text-xl font-bold">Pemberkatan</p>
 						<hr />
 						<p class="mt-2 text-lg font-semibold">GKI Samanhudi</p>
@@ -107,14 +107,14 @@
 				<div class="grid grid-cols-2 justify-self-center text-center sm:w-150">
 					<div class="col-span-2 my-5">Kami yang berbahagia</div>
 					<div>
-						<p class="text-sm font-bold">Pihak Wanita</p>
-						<p class="text-sm">Tn. Cau Kok Sen/Rosissan</p>
-						<p class="text-sm">Ny. Huang Mei Yong/Mai Jani</p>
+						<p class="text-xs sm:text-sm font-bold">Pihak Wanita</p>
+						<p class="text-xs sm:text-sm">Tn. Cau Kok Sen/Rosissan</p>
+						<p class="text-xs sm:text-sm">Ny. Huang Mei Yong/Mai Jani</p>
 					</div>
 					<div>
-						<p class="text-sm font-bold">Pihak Pria</p>
-						<p class="text-sm">Tn. Sun Yun Fong/Firdaus Y</p>
-						<p class="text-sm">Ny. Li Hui Chen/Evie K</p>
+						<p class="text-xs sm:text-sm font-bold">Pihak Pria</p>
+						<p class="text-xs sm:text-sm">Tn. Sun Yun Fong/Firdaus Y</p>
+						<p class="text-xs sm:text-sm">Ny. Li Hui Chen/Evie K</p>
 					</div>
 				</div>
 			</div>
