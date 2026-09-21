@@ -47,7 +47,7 @@
 <!-- Selecta Invitations -->
 {#if medan}
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
-		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle text-xs sm:text-base">
+		<div class="grid h-dvh w-full items-center justify-center p-5 sm:p-15 align-middle text-xs sm:text-base">
 			<div class="justify-center text-center align-middle sm:m-10">
 				<div class="mb-6">
 					<p>
