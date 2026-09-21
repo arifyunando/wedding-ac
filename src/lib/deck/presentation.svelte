@@ -18,53 +18,106 @@
 	</div>
 </section>
 <!-- Bride and Groom -->
-<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
-	<div
-		class="relative flex h-dvh flex-col-reverse place-items-center items-center justify-center gap-2 p-5 align-middle sm:flex-row sm:gap-10 sm:p-15"
-	>
-		<div class="justify-center text-center align-middle sm:m-10">
-			<div class="mb-10">
-				<p class="text-sm italic">
-					"For I know the plans I have for you,” declares the Lord, <br> “plans to prosper you and not to
-					harm you, plans to give you hope and a future."
+{#if !medan}
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
+		<div
+			class="relative flex h-dvh flex-col-reverse place-items-center items-center justify-center gap-2 p-5 align-middle sm:flex-row sm:gap-10 sm:p-15"
+		>
+			<div class="justify-center text-center align-middle sm:m-10">
+				<div class="mb-10">
+					<p class="text-sm italic">
+						"For I know the plans I have for you,” declares the Lord, <br /> “plans to prosper you and
+						not to harm you, plans to give you hope and a future."
+					</p>
+					<p class="text-sm">- Jeremiah 29:11</p>
+				</div>
+				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">
+					Arif Yunando Sunanhadikusuma
 				</p>
-				<p class="text-sm">- Jeremiah 29:11</p>
+				<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & <br /> Ny. Evie Kertarahardja</p>
+				<p class="my-5">&</p>
+				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
+				<p>Putri sulung dari <br /> Tn. Rosissan & Ny. Mai Jani</p>
 			</div>
-			<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Arif Yunando Sunanhadikusuma</p>
-			<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & <br /> Ny. Evie Kertarahardja</p>
-			<p class="my-5">&</p>
-			<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
-			<p>Putri sulung dari <br /> Tn. Rosissan & Ny. Mai Jani</p>
+			<img src="/assets/couple-2.JPG" alt="monogram" class="flex-1 overflow-hidden" />
 		</div>
-		<img src="/assets/couple-2.JPG" alt="monogram" class="flex-1 overflow-hidden" />
-	</div>
-</section>
+	</section>
+{/if}
+
 <!-- Selecta Invitations -->
 {#if medan}
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
-			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Engagement Banquet</p>
-			<div class="grid justify-self-center text-center sm:w-100">
-				<p class="my-5 text-2xl">Selecta Hotel Ballroom (Lantai 3)</p>
-				<p class="my-2">Jl. Listrik No.2, Kota Medan</p>
-				<p class="my-1">Minggu, 4 Oktober 2026</p>
-				<p>19:00 WIB</p>
-			</div>
-			<div class="grid justify-self-center text-center sm:w-100">
-				<p class="text-sm">Upacara penjemputan mempelai wanita
-				dan Ibadah Pemberkatan Pernikahan
-				akan diselenggarakan pada <br> 10 Oktober 2026 di Jakarta</p>
-			</div>
-			<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
-				<button
-					class="my-12 inline-flex w-1/2 transform cursor-pointer items-center
+			<div class="justify-center text-center align-middle sm:m-10">
+				<div class="mb-6">
+					<p>
+						Dengan hormat kami mengundang Bapak/Ibu/Saudara/I untuk menghadiri acara pertunangan
+						putra - putri kami:
+					</p>
+				</div>
+				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
+				<p>
+					Putri sulung dari Tn. Rosissan & Ny. Mai Jani <br /> (PT Buana Trussindo Mandiri)
+				</p>
+				<p class="my-5">&</p>
+				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">
+					Arif Yunando Sunanhadikusuma
+				</p>
+				<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & Ny. Evie Kertarahardja</p>
+				<div class="mt-5 grid gap-10 justify-self-center text-center sm:grid-cols-2">
+					<div>
+						<p class="my-2 text-xl font-bold">Pertunangan</p>
+						<hr />
+						<p class="mt-2 text-lg font-semibold">Selecta Hotel Ballroom (Lantai 3)</p>
+						<p class="mb-2">Jl. Listrik No.2, Kota Medan</p>
+						<p class="mt-2 text-lg font-semibold">Minggu, 4 Oktober 2026</p>
+						<p class="mb-2">Pukul 19:00 WIB</p>
+						<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
+							<button
+								class="my-5 inline-flex w-2/3 transform cursor-pointer items-center
 						 justify-center justify-self-center rounded-3xl bg-(--surface-4) px-4 py-3
 						 text-center leading-none font-medium text-white shadow-md transition
 						 duration-200 hover:bg-black hover:text-white hover:shadow-none max-sm:w-2/3 sm:px-8"
-				>
-					Location
-				</button>
-			</a>
+							>
+								Location
+							</button>
+						</a>
+					</div>
+					<div>
+						<p class="my-2 text-xl font-bold">Pemberkatan</p>
+						<hr />
+						<p class="mt-2 text-lg font-semibold">GKI Samanhudi</p>
+						<p class="mb-2">Jl. Samanhudi No. 28, Jakarta Pusat</p>
+						<p class="mt-2 text-lg font-semibold">Sabtu, 10 Oktober 2026</p>
+						<p class="mb-2">Pukul 10:00 WIB</p>
+
+						<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
+							<button
+								class="my-5 inline-flex w-2/3 transform cursor-pointer items-center
+						 justify-center justify-self-center rounded-3xl bg-(--surface-4) px-4 py-3
+						 text-center leading-none font-medium text-white shadow-md transition
+						 duration-200 hover:bg-black hover:text-white hover:shadow-none max-sm:w-2/3 sm:px-8"
+							>
+								Location
+							</button>
+						</a>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-2 justify-self-center text-center sm:w-150">
+					<div class="col-span-2 my-5">Kami yang berbahagia</div>
+					<div>
+						<p class="text-sm font-bold">Pihak Wanita</p>
+						<p class="text-sm">Tn. Cau Kok Sen/Rosissan</p>
+						<p class="text-sm">Ny. Huang Mei Yong/Mai Jani</p>
+					</div>
+					<div>
+						<p class="text-sm font-bold">Pihak Pria</p>
+						<p class="text-sm">Tn. Sun Yun Fong/Firdaus Y</p>
+						<p class="text-sm">Ny. Li Hui Chen/Evie K</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 {/if}
@@ -124,7 +177,7 @@
 {#if medan}
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="hidden h-dvh w-full justify-center align-middle sm:grid">
-			<img src="/assets/chinese-invitations-mdn.png" alt="monogram" class="p-5 object-contain" />
+			<img src="/assets/chinese-invitations-mdn.png" alt="monogram" class="object-contain p-5" />
 		</div>
 		<div class="chinese-invitations grid sm:hidden">
 			<img src="/assets/chinese-invitations-mdn-vert.png" alt="monogram" />
