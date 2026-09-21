@@ -4,6 +4,6 @@
 	import Slides from '$lib/deck/slides.svelte';
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+
 
 <Slides />
