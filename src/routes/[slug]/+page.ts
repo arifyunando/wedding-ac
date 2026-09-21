@@ -3,6 +3,7 @@ export const ssr = false;
 
 export async function load({ params }: any) {
 	const status = {
+		slug: params.slug,
 		isValid: false,
 		medan: false,
 		gereja: false,
