@@ -86,7 +86,7 @@
 					Arif Yunando Sunanhadikusuma
 				</p>
 				<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & Ny. Evie Kertarahardja</p>
-				<div class="mt-5 grid gap-10 justify-self-center text-center sm:grid-cols-2">
+				<div class="mt-5 grid gap-5 sm:gap-10 justify-self-center text-center grid-cols-2">
 					<div>
 						<p class="my-2 font-bold sm:text-xl">Pertunangan</p>
 						<hr />
@@ -105,15 +105,15 @@
 							</button>
 						</a>
 					</div>
-					<div class="max-sm:hidden">
-						<p class="my-2 text-xl font-bold">Pemberkatan</p>
+					<div class="">
+						<p class="my-2 font-bold sm:text-xl">Pemberkatan</p>
 						<hr />
-						<p class="mt-2 text-lg font-semibold">GKI Samanhudi</p>
+						<p class="mt-2 font-semibold sm:text-lg">GKI Samanhudi</p>
 						<p class="mb-2">Jl. Samanhudi No. 28, Jakarta Pusat</p>
-						<p class="mt-2 text-lg font-semibold">Sabtu, 10 Oktober 2026</p>
+						<p class="mt-2 font-semibold sm:text-lg">Sabtu, 10 Oktober 2026</p>
 						<p class="mb-2">Pukul 10:00 WIB</p>
 
-						<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
+						<a href="https://maps.app.goo.gl/N9J1MARFVP3AgoyD8" target="_blank">
 							<button
 								class="my-5 inline-flex w-2/3 transform cursor-pointer items-center
 						 justify-center justify-self-center rounded-3xl bg-(--surface-4) px-4 py-3
