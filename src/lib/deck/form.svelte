@@ -1,5 +1,5 @@
 <script>
-	let { medan, gereja, lee } = $props();
+	let { medan, gereja, lee, nameParam } = $props();
 	// Country codes for the phone number combobox
 	const countryCodes = [
 		{ code: '+1', label: '+1 (US/CA)' },
@@ -77,7 +77,7 @@
 				name,
 				countryCode,
 				phoneNumber,
-				affiliation,
+				affiliation: affiliation + ` (${nameParam})`,
 				numAttendantsMdn,
 				numAttendantsGrj,
 				numAttendantsLee,
@@ -252,7 +252,7 @@
 	{#if submitted && !isValid}
 		<p class="fail-text">Harap mengisi seluruh kolom yang wajib diisi.</p>
 	{:else if submitted && !submitSuccess}
-		<p class="fail-text">Terjadi kesalahan. Silahkan coba lagi / hubungi kami.</p> <a href="https://wa.link/60r9qu"><p class="underline underline-offset-5 hover:font-bold">☎️ WhatsApp</p></a>
+		<p class="loading-text">Data diproses... Tunggu / Ulangi dalam beberapa saat</p>
 	{:else if submitted && submitSuccess}
 		<p class="success-text">Terima kasih! 感謝光臨</p>
 	{/if}
@@ -380,6 +380,11 @@
 
 	.fail-text {
 		color: #e02424;
+		margin: 0.25rem 0 0 0;
+	}
+
+	.loading-text {
+		color: #0e4171;
 		margin: 0.25rem 0 0 0;
 	}
 </style>

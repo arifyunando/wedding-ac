@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/assets/reveal-custom.css';
 	import Form from './form.svelte';
-	let { medan, gereja, lee } = $props();
+	let { medan, gereja, lee, name } = $props();
 </script>
 
 <section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
@@ -222,7 +222,7 @@
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="flex h-dvh w-full flex-col justify-center p-5 align-middle">
 			<p class="mt-3 font-(family-name:--font-script-ui) text-6xl">Seat Reservations</p>
-			<Form {medan} {gereja} {lee} />
+			<Form {medan} {gereja} {lee} nameParam={name}/>
 		</div>
 	</section>
 {/if}

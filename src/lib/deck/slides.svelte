@@ -8,7 +8,7 @@
 	import 'reveal.js/reveal.css';
 	import '$lib/assets/reveal-custom.css';
 
-	let { medan = false, gereja = false, lee = false } = $props();
+	let { medan = false, gereja = false, lee = false, name } = $props();
 
 	onMount(() => {
 		const deck = new Reveal({
@@ -29,6 +29,6 @@
 
 <div class="reveal">
 	<div class="slides grid">
-		<Presentation {medan} {gereja} {lee} />
+		<Presentation {medan} {gereja} {lee} {name}/>
 	</div>
 </div>

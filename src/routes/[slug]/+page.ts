@@ -1,13 +1,14 @@
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ssr = false;
 
-export async function load({ params }: any) {
+export async function load({ params, url }: any) {
 	const status = {
 		slug: params.slug,
 		isValid: false,
 		medan: false,
 		gereja: false,
-		leePalace: false
+		leePalace: false,
+		name: url.searchParams.get("name")
 	};
 
 	if (params.slug == 'medan') {

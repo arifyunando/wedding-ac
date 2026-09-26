@@ -27,7 +27,7 @@
 </svelte:head>
 
 {#if data.isValid}
-	<Slides medan={data.medan} gereja={data.gereja} lee={data.leePalace} />
+	<Slides medan={data.medan} gereja={data.gereja} lee={data.leePalace} name={data.name}/>
 {:else}
 	Error 404: Page not Found! Invalid Link
 {/if}
