@@ -8,7 +8,7 @@
 	<div class="flex h-dvh flex-col items-center justify-center pt-10">
 		<img src="/assets/logo-full-transparent.png" alt="monogram" class="p-10 md:w-150" />
 		<button
-			class="navigate-next my-12 inline-flex w-1/2 transform cursor-pointer items-center
+			class="navigate-next mb-12 inline-flex w-1/2 transform cursor-pointer items-center
 						 justify-center justify-self-center rounded-3xl bg-(--surface-4) px-4 py-3
 						 text-center leading-none font-medium text-white shadow-md transition duration-200
 						 hover:bg-black hover:text-white hover:shadow-none max-sm:w-2/3 sm:px-8"
@@ -23,7 +23,7 @@
 		<div
 			class="relative flex h-dvh flex-col-reverse place-items-center items-center justify-center gap-2 p-5 align-middle sm:flex-row sm:gap-10 sm:p-15"
 		>
-			<div class="justify-center text-center align-middle sm:m-10">
+			<div class="min-w-1/2 justify-center text-center align-middle sm:m-10">
 				<div class="mb-5">
 					<p class="text-xs italic sm:text-sm">
 						"For I know the plans I have for you,” declares the Lord, <br /> “plans to prosper you and
@@ -39,8 +39,10 @@
 				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
 				<p>Putri sulung dari <br /> Tn. Rosissan & Ny. Mai Jani</p>
 			</div>
-			<div class="flex grow items-center overflow-hidden">
-				<img src="/assets/couple-2.JPG" alt="monogram" class="h-full object-cover" />
+			<div
+				class="flex grow items-center justify-center overflow-hidden object-contain align-middle"
+			>
+				<img src="/assets/couple-2.JPG" alt="monogram" class="" />
 			</div>
 		</div>
 	</section>
@@ -86,7 +88,7 @@
 					Arif Yunando Sunanhadikusuma
 				</p>
 				<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & Ny. Evie Kertarahardja</p>
-				<div class="mt-5 grid gap-5 sm:gap-10 justify-self-center text-center grid-cols-2">
+				<div class="mt-5 grid grid-cols-2 gap-5 justify-self-center text-center sm:gap-10">
 					<div>
 						<p class="my-2 font-bold sm:text-xl">Pertunangan</p>
 						<hr />
@@ -222,7 +224,7 @@
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
 		<div class="flex h-dvh w-full flex-col justify-center p-5 align-middle">
 			<p class="mt-3 font-(family-name:--font-script-ui) text-6xl">Seat Reservations</p>
-			<Form {medan} {gereja} {lee} nameParam={name}/>
+			<Form {medan} {gereja} {lee} nameParam={name} />
 		</div>
 	</section>
 {/if}
