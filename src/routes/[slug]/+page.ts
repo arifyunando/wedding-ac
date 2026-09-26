@@ -15,5 +15,11 @@ export async function load({ params }: any) {
 		status.medan = true;
 	}
 
+	else if (params.slug == 'resepsi') {
+		status.isValid = true;
+		status.gereja = true;
+		status.leePalace = true;
+	}
+
 	return status;
 }

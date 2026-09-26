@@ -24,12 +24,12 @@
 			class="relative flex h-dvh flex-col-reverse place-items-center items-center justify-center gap-2 p-5 align-middle sm:flex-row sm:gap-10 sm:p-15"
 		>
 			<div class="justify-center text-center align-middle sm:m-10">
-				<div class="mb-10">
-					<p class="text-sm italic">
+				<div class="mb-5">
+					<p class="text-xs italic sm:text-sm">
 						"For I know the plans I have for you,” declares the Lord, <br /> “plans to prosper you and
 						not to harm you, plans to give you hope and a future."
 					</p>
-					<p class="text-sm">- Jeremiah 29:11</p>
+					<p class="text-xs sm:text-sm">- Jeremiah 29:11</p>
 				</div>
 				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">
 					Arif Yunando Sunanhadikusuma
@@ -39,7 +39,9 @@
 				<p class="pb-3 font-(family-name:--font-script-ui) text-3xl">Cindy Rosemary</p>
 				<p>Putri sulung dari <br /> Tn. Rosissan & Ny. Mai Jani</p>
 			</div>
-			<img src="/assets/couple-2.JPG" alt="monogram" class="flex-1 overflow-hidden" />
+			<div class="flex grow items-center overflow-hidden">
+				<img src="/assets/couple-2.JPG" alt="monogram" class="h-full object-cover" />
+			</div>
 		</div>
 	</section>
 {/if}
@@ -47,7 +49,27 @@
 <!-- Selecta Invitations -->
 {#if medan}
 	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
-		<div class="grid h-dvh w-full items-center justify-center p-5 sm:p-15 align-middle text-xs sm:text-base">
+		<div
+			class="relative flex h-dvh flex-col-reverse place-items-center items-center
+			       justify-center gap-2 p-5 align-middle sm:flex-row sm:gap-10 sm:p-15"
+		>
+			<!-- <div class="grid h-full sm:grid-cols-3 sm:grid-rows-3 gap-5 p-5"> -->
+			<img
+				src="/assets/couple-2.JPG"
+				alt="monogram"
+				class="row-span-3 h-full w-full object-contain object-center"
+			/>
+			<!-- <img src="/assets/couple-1.JPG" alt="monogram" class="max-sm:hidden row-start-2 row-span-2 w-full h-full object-cover object-center" /> -->
+			<!-- <img src="/assets/couple-3.JPG" alt="monogram" class="max-sm:hidden row-span-2 w-full h-full object-cover object-center" /> -->
+			<!-- <img src="/assets/couple-4.JPG" alt="monogram" class="w-full object-cover" /> -->
+			<!-- </div> -->
+		</div>
+	</section>
+
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
+		<div
+			class="grid h-dvh w-full items-center justify-center p-5 align-middle text-xs sm:p-15 sm:text-base"
+		>
 			<div class="justify-center text-center align-middle sm:m-10">
 				<div class="mb-6">
 					<p>
@@ -66,11 +88,11 @@
 				<p>Putra bungsu dari <br /> Tn. Firdaus Yunando Sun & Ny. Evie Kertarahardja</p>
 				<div class="mt-5 grid gap-10 justify-self-center text-center sm:grid-cols-2">
 					<div>
-						<p class="my-2 sm:text-xl font-bold">Pertunangan</p>
+						<p class="my-2 font-bold sm:text-xl">Pertunangan</p>
 						<hr />
-						<p class="mt-2 sm:text-lg font-semibold">Selecta Hotel Ballroom (Lantai 3)</p>
+						<p class="mt-2 font-semibold sm:text-lg">Selecta Hotel Ballroom (Lantai 3)</p>
 						<p class="mb-2">Jl. Listrik No.2, Kota Medan</p>
-						<p class="mt-2 sm:text-lg font-semibold">Minggu, 4 Oktober 2026</p>
+						<p class="mt-2 font-semibold sm:text-lg">Minggu, 4 Oktober 2026</p>
 						<p class="mb-2">Pukul 19:00 WIB</p>
 						<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
 							<button
@@ -107,12 +129,12 @@
 				<div class="grid grid-cols-2 justify-self-center text-center sm:w-150">
 					<div class="col-span-2 my-5">Kami yang berbahagia</div>
 					<div>
-						<p class="text-xs sm:text-sm font-bold">Pihak Wanita</p>
+						<p class="text-xs font-bold sm:text-sm">Pihak Wanita</p>
 						<p class="text-xs sm:text-sm">Tn. Cau Kok Sen/Rosissan</p>
 						<p class="text-xs sm:text-sm">Ny. Huang Mei Yong/Mai Jani</p>
 					</div>
 					<div>
-						<p class="text-xs sm:text-sm font-bold">Pihak Pria</p>
+						<p class="text-xs font-bold sm:text-sm">Pihak Pria</p>
 						<p class="text-xs sm:text-sm">Tn. Sun Yun Fong/Firdaus Y</p>
 						<p class="text-xs sm:text-sm">Ny. Li Hui Chen/Evie K</p>
 					</div>

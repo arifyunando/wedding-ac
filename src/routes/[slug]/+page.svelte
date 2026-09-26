@@ -7,7 +7,7 @@
 	const description =
 		'Minggu, 4 Oktober 2026. Tanpa Mengurangi Rasa Hormat. Kami Bermaksud Mengundang Bapak/Ibu/Saudara/i, Pada Acara Pertunangan Kami';
 	const imageLink = '/assets/logo-full.png';
-	const url = `https://weddingcard-cr.aysoen.com/${data.slug}`;
+	const url = `https://weddingcard-cr.aysoen.com/${data.slug}/`;
 </script>
 
 <svelte:head>
@@ -21,6 +21,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={url} />
 	<meta property="og:title" content={title} />
+	<meta property="og:site_name" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={imageLink} />
 </svelte:head>
