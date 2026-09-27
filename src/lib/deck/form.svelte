@@ -255,6 +255,8 @@
 		<p class="loading-text">Data diproses... Tunggu / Ulangi dalam beberapa saat</p>
 	{:else if submitted && submitSuccess}
 		<p class="success-text">Terima kasih! 感謝光臨</p>
+		<br />
+		<p class="success-text">Please kindly let us know if you want to give us a wedding gift. 😊</p>
 	{/if}
 </div>
 
