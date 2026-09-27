@@ -181,7 +181,12 @@
 				<p class="mt-5 mb-3">Harmoni Exchange Mall Lt. 3</p>
 				<p class="mb-2">Jl. Hayam Wuruk VI No. 6, Gambir, Jakarta Pusat</p>
 				<p class="my-1">Minggu, 11 Oktober 2026</p>
-				<p>18:30 WIB</p>
+				<p class="mb-8">18:30 WIB</p>
+				<p class="text-xs font-semibold italic">Format Acara</p>
+				<p class="text-xs italic">
+					Acara akan berupa makan meja bersama, dilengkapi dengan hidangan dan minuman.
+					Silakan hadir tepat waktu dan nikmati malam bersama kami.
+				</p>
 			</div>
 			<a href="https://maps.app.goo.gl/2ZwpGuFbSueqRejw7" target="_blank">
 				<button
