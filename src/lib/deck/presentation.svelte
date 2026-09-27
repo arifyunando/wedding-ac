@@ -257,10 +257,47 @@
 
 <!-- Closing + Wedding Gift -->
 <section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
-	<div class="grid h-dvh items-center justify-center">
-		<p class="font-(family-name:--font-script-ui) text-7xl">Thank You</p>
+	<div class="flex h-[90dvh] flex-col items-center justify-center gap-5 my-10">
+		<div class="flex grow items-center justify-center" >
+			<p class="font-(family-name:--font-script-ui) text-7xl">
+				Thank You
+			</p>
+		</div>
+		{#if !medan}
+			<button
+				class="navigate-next inline-flex w-80 transform cursor-pointer items-center justify-center
+						 justify-self-center rounded-3xl bg-(--surface-4) px-3 py-2 text-center
+						 text-xs leading-none font-medium text-white shadow-md transition duration-200
+						 hover:bg-black hover:text-white hover:shadow-none max-sm:w-2/3 sm:px-8"
+			>
+				Sending a wedding gift?
+			</button>
+		{/if}
 	</div>
 </section>
+
+{#if !medan}
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
+		<div class="flex h-dvh w-full flex-col justify-center gap-10 p-5 align-middle">
+			<p class="font-(family-name:--font-script-ui) text-7xl">Wedding Gift</p>
+			<div>
+				<p class="m-5">We appreciate your wedding gift. 😊</p>
+				<br />
+				<p class="m-5">Monetary Gift</p>
+
+				<p class="m-3">
+					EUR: <span class="font-semibold text-blue-800 hover:underline"
+						><a href="https://tikkie.me/pay/5heokf32akoken70cu8a" target="_blank">Tikkie</a></span
+					>
+					(NL only) / IBAN <b>NL75 INGB 0398 4364 52</b> (Swiftcode: INGBNL2A)
+				</p>
+				<p class="m-3">
+					IDR: <b>BCA 3420133161</b> a/n Arif Yunando Sunanhadikusuma
+				</p>
+			</div>
+		</div>
+	</section>
+{/if}
 
 <style>
 	section {

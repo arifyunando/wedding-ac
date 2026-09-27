@@ -257,6 +257,16 @@
 		<p class="success-text">Terima kasih! 感謝光臨</p>
 		<br />
 		<p class="success-text">Please kindly let us know if you want to give us a wedding gift. 😊</p>
+		<br />
+		<p class="success-text">
+			Monetary gift in EUR: <span class='font-semibold text-blue-800 hover:underline'><a href="https://tikkie.me/pay/5heokf32akoken70cu8a" target="_blank"
+				>Tikkie</a
+			></span> (NL only)
+		</p>
+		<p class="success-text">or IBAN NL75 INGB 0398 4364 52 (Swiftcode INGBNL2A)</p>
+		<p class="success-text">
+			Monetary gift in IDR can be transferred to <b>BCA 3420133161</b> a/n Arif Yunando Sunanhadikusuma
+		</p>
 	{/if}
 </div>
 
