@@ -22,5 +22,10 @@ export async function load({ params, url }: any) {
 		status.leePalace = true;
 	}
 
+	else if (params.slug == 'pemberkatan') {
+		status.isValid = true
+		status.gereja = true
+	}
+
 	return status;
 }

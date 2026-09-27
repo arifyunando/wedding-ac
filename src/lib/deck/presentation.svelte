@@ -46,6 +46,27 @@
 			</div>
 		</div>
 	</section>
+	<section data-background-opacity=".25" data-background-image="/assets/bg-6.jpg" data-auto-animate>
+		<div class="grid h-dvh w-full items-center justify-center p-15 align-middle">
+			<p class="mb-10 font-(family-name:--font-script-ui) text-6xl">Engagement Banquet</p>
+			<div class="grid justify-self-center text-center sm:w-100">
+				<p class="my-5 text-2xl">Selecta Hotel Ballroom (Lantai 3)</p>
+				<p class="my-2">Jl. Listrik No.2, Kota Medan</p>
+				<p class="my-1">Minggu, 4 Oktober 2026</p>
+				<p>19:00 WIB</p>
+			</div>
+			<a href="https://maps.app.goo.gl/mXnu6nMHKoHURytAA" target="_blank">
+				<button
+					class="my-12 inline-flex w-1/2 transform cursor-pointer items-center
+						 justify-center justify-self-center rounded-3xl bg-(--surface-4) px-4 py-3
+						 text-center leading-none font-medium text-white shadow-md transition
+						 duration-200 hover:bg-black hover:text-white hover:shadow-none max-sm:w-2/3 sm:px-8"
+				>
+					Location
+				</button>
+			</a>
+		</div>
+	</section>
 {/if}
 
 <!-- Selecta Invitations -->
@@ -184,8 +205,8 @@
 				<p class="mb-8">18:30 WIB</p>
 				<p class="text-xs font-semibold italic">Format Acara</p>
 				<p class="text-xs italic">
-					Acara akan berupa makan meja bersama, dilengkapi dengan hidangan dan minuman.
-					Silakan hadir tepat waktu dan nikmati malam bersama kami.
+					Acara akan berupa makan meja bersama, dilengkapi dengan hidangan dan minuman. Silakan
+					hadir tepat waktu dan nikmati malam bersama kami.
 				</p>
 			</div>
 			<a href="https://maps.app.goo.gl/2ZwpGuFbSueqRejw7" target="_blank">
